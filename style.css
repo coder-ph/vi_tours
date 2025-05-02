@@ -1,0 +1,1087 @@
+ *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+ /* General Styles */
+ body {
+    background-color: #f4f4f4;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+ /* Eda-Logo Styling */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 35px;
+  }
+  .social-icons a {
+    color: #2a2ab9     ;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .social-icons a:hover {
+    color: #0077b5; /* Example hover color */
+  }
+
+/* Navbar section */
+.ctanav-button {
+    text-transform: uppercase;
+    margin: 8px 0;
+    background: white;
+    color: #2a2ab9;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 540;
+    
+}
+.navbar {
+    width: 100%;
+    background: #2a2ab9;
+    position: fixed;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); 
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px;
+    margin: 0 70px;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: orange;
+    transition: width 0.3s ease-in-out;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #444;
+}
+
+.dropdown-visible {
+    max-height: 200px; /* Show only 5 items initially */
+    overflow: hidden;
+}
+
+.dropdown-scroll {
+    max-height: 150px;
+    overflow-y: auto; /* Enable scrolling for the rest of the items */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+    /* Navigation icons */
+.nav-icons {
+    display: none;
+}
+.nav-toggle, .nav-close {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.eda-container img{
+    width: 300px;
+    height: auto;
+
+}
+.eda-container{
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 70px;
+}
+
+/* Hero section */
+.hero{
+    width: 100%;
+    height: 50vh;
+    background-image: radial-gradient(rgba(0, 0, 8, 0.3) , rgba(0, 0, 0, 0.6) ), url(images/zebra-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+.hero .content h1{
+    font-size: 100px;
+    font-weight: bold;
+    margin:0;
+    padding: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4 );
+    margin-bottom: 20px;
+}
+
+.hero .content  p{
+    font-size: 30px;
+    font-weight: 600
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;             /* Picture and paragraph container - sets the content at the center of the page */
+    padding: 0px;
+}
+.paragraph-with-image {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.9em;
+    color: #3C3C3B;
+    text-align: left;
+    margin: 0 20px;
+}
+.paragraph-with-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 5px;
+}
+.reverse{
+    flex-direction: row-reverse;
+    margin-top: 20px;
+}
+
+/*The welcoming/invite message section*/
+.invite-header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 0 80px;
+    margin-top: 70px;
+    color: rgb(41, 41, 41);
+    font-weight: 700;
+
+  }
+  /* Book now button */
+.make-inquiries-btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+.make-inquiries-btn {
+    font-size: 20px;
+    font-weight: 550;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    animation: colorCycle 2s linear infinite;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+  }
+
+  @keyframes colorCycle {
+    0%   { background-color: #ff6b6b; }
+    25%  { background-color: #feca57; }
+    50%  { background-color: #48dbfb; }
+    75%  { background-color: #1dd1a1; }
+    100% { background-color: #ff6b6b; }
+  }
+
+  /* Wrapper for all rows */
+  .cards-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  /* Each row container */
+  .row-container {
+    position: relative;
+    width: 100%;
+    height: 250px; /* adjust as needed to fit your image sizes */
+    overflow: hidden; /* hide overflow for the continuous scroll effect */
+    background: #dadada;
+    margin-bottom: 40px;
+  }
+
+  /* The slider container that holds all the cards.
+     Duplicating the content inside helps to achieve a continuous motion.*/
+  .slider {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 140%;
+    animation: continuousScroll 10s linear infinite;
+  }
+
+  /* Pause animation on hover */
+  .row-container:hover .slider {
+    animation-play-state: paused;
+  }
+
+  /* Each card container */
+  .card {
+    min-width: 150px;
+    height: 200px;
+    margin: 0 2px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #ccc;
+    flex-shrink: 0;
+    position: relative;
+  }
+  /* Each card's image */
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Continuous scrolling keyframe animation.
+     The idea is to move the entire slider container from 0 to -50% (when duplicating the set
+     of images, the second half is identical, creating a seamless transition). */
+  @keyframes continuousScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+/*Destination Section*/
+.destination {
+    min-height: 100vh;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    padding: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+.destination.active {
+    display: flex;
+}
+.destination-title{
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.destination-description{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.destination-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+.destination-details {
+    display: none;
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    text-align: center;
+
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    max-width: 1000px ;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    justify-items: center;
+    align-items: center;
+    z-index: 2;
+}
+@media (max-width: 480px) {
+    .details-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);  /* Single column for small screens */
+    }
+}
+.detail-item img {
+    width: 200px;
+    display: flex;
+    margin: 0 auto 0.5rem auto;
+    border-radius: px;
+}
+.detail-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+.detail-item:hover {
+    transform: scale(1.7);
+}
+.detail-item h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+.detail-item p {
+    font-size: 0.7rem;
+    color: #666;
+    margin-bottom: 1rem;
+    text-align: justify;
+    line-break: anywhere;
+}
+
+/* Read More / Read Less */
+.read-more, .read-less {
+    background-color: #f90;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: medium;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* Destination page - styling */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.screen-prev-arrow {
+    left: 10px;
+    margin-left: 0px;
+}
+
+.screen-next-arrow {
+    right: 10px;
+}
+
+.nav-arrow i {
+    font-size: 24px;
+}
+
+.nav-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.destination.active .nav-arrow {
+    display: block;
+}
+
+.destination:not(.active) .nav-arrow {
+    display: none;
+}
+
+.East-africa-message {
+    margin: 50px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.East-africa-message-content p{
+    font-size: 1.5em;
+}
+
+
+/*About us Section*/
+.about-section {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    background-image: radial-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/lioness-about-us.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.about-content{
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    padding: 60px;
+    border-radius: 10px;
+    text-align: center5
+}
+.about-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+} 
+
+/*About us -Grid Section*/
+ .about-grid-display {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Default: three columns */
+    gap: 10px;
+    margin: 0 30px;
+}
+
+@media (max-width: 768px) {
+    .about-grid-display {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+        padding-right: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-grid-display {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+}
+
+.about-grid-content {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    gap: 19px;
+}
+
+.about-grid-content h3 {
+    margin-bottom: 15px;
+    color: navy;
+    font-size: 15px;
+}
+.about-grid-content h5{
+    color: rgb(49, 49, 49);
+    margin: 10px 0;
+}
+
+.about-grid-content ul {
+    list-style-type: disc;
+}
+
+.about-grid-content ul li {
+    margin-bottom: 5px;
+    color: rgb(143, 93, 0);
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 15px;
+}
+
+.about-grid-content p {
+    margin-top: 10px;
+    color: rgb(49, 49, 49);
+    font-size: 12px;
+}
+
+.about-span-txt {
+    font-weight: 500;
+    color: rgb(4, 4, 192);
+    font-size: 12px;
+}
+@media (max-width: 1476px) {
+    .about-grid-display {
+        grid-template-columns: repeat(2, 1fr);       
+    }
+}
+
+/*packages Section*/
+.package-section{
+    box-sizing: border-box;
+    background-color: #dadada;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.package-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(800px, 1fr)); /* Adjusted for better responsiveness */
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.package-contents {
+    margin: 50px 10px; /* Reduced margin for smaller screens */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.package-contents h2 {
+    font-size: 1.8rem; /* Adjusted font size for better scaling */
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    padding: 13px;
+}
+
+.more-info-btn a {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.more-info-btn {
+    background-color: rgb(255, 136, 0);
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-top: 20px;
+    color: #ffffff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.more-info-btn:hover {
+    background-color: #ff8c00;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+@media (max-width: 768px) {
+    .package-wrapper {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted for medium screens */
+        gap: 15px;
+    }
+
+    .package-contents h2 {
+        font-size: 1.5rem; /* Smaller font size for medium screens */
+    }
+
+    .more-info-btn {
+        padding: 8px 16px; /* Adjusted padding for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .package-wrapper {
+        grid-template-columns: 1fr; /* Single column for small screens */
+        gap: 10px;
+    }
+
+    .package-contents {
+        margin: 30px 5px; /* Reduced margin for small screens */
+    }
+
+    .package-contents h2 {
+        font-size: 1.2rem; /* Smaller font size for small screens */
+    }
+
+    .more-info-btn {
+        padding: 6px 12px; /* Adjusted padding for small screens */
+        font-size: 12px; /* Smaller font size for small screens */
+    }
+}
+.more-info-btn:hover {
+    background-color: #ff8c00; /* Slightly darker shade of orange */
+    transform: scale(1.1); /* Slight zoom effect */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/*Contact Section*/
+.contact-section {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0, 0.4), rgba(0,0,0, 0.4)), url(images/zebra-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px;
+    color: white;
+    margin: 50px 0;
+}
+.contact-content {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 228, 0.6);
+}
+.contact-content input, .contact-content textarea {
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: Arial;
+}
+.contact-content button {
+    background: #ff5722;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#confirmation-message, #error-message {
+    opacity: 0;
+    transition: opacity 1.5s ease-out;
+}
+.hidden {
+    display: none;
+}
+
+.ctaform-button {
+    margin-top: 15px;
+    background: #ff5722;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgb(78, 78, 78);
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    body{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+
+/* EDA-Logo responsive styling */
+.eda-container{
+    margin: 20px 35px;
+    padding-top: 80px;
+
+}
+.eda-container img{
+    width: 180px;
+
+}
+.social-icons{
+    font-size: 25px;
+}
+
+
+.nav-container {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   z-index: 1000;
+   box-shadow: 2 2 9 rgba(0, 0, 0, 0.5);
+   margin: 8px 20px;
+   
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        width: auto;
+        background: rgba(45, 45, 193, 0.9);
+        padding: 20px;
+        text-align: left;
+        justify-content: center;
+        overflow-x: none;
+        margin-left: 150px;
+    }
+    .nav-links a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: orange;
+        transition: width 0.3s ease-in-out;
+    }
+    .nav-icons {
+        display: block;
+        font-size: small;
+        padding-right: 0px;
+    }
+    .nav-toggle {
+        display: block;
+        position: relative;
+    }
+    .nav-close {
+        display: none;
+    }
+    .ctanav-button {
+        background: rgb(255, 255, 255);
+        color: navy;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    /* Navigation scroll functionality - Article links */
+    .dropdown-menu {
+        position: absolute;
+        box-shadow: none;
+        width: auto;
+    }
+
+    .dropdown-menu a {
+        padding: 10px;
+        text-align: left;
+    }
+
+
+/* Hero section */
+.hero{
+    height: 55vh;  
+    border-top: none;
+}
+.content{
+    margin-right: 0px;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+.hero .content h1{
+    font-size: 70px ;
+    line-height: 68px
+}
+.hero .content p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 2px;
+}
+.paragraph-with-image {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+}
+
+.paragraph-with-image img {
+    width: 230px;
+    height: auto;
+    border-radius: 7px;
+
+}
+.paragraph-with-image p {
+    text-align: justify;
+    line-break: anywhere;
+    font-size: 14px;
+    font-weight: 400;
+    color: #3C3C3B;
+    margin: 0 20px;
+
+}
+
+/*The welcoming/invite message section*/
+.slider {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 1500%;
+    animation: continuousScroll 10s linear infinite;
+  }
+  .invite-header{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px 25px;
+    margin-top: 25px;
+    color: #3C3C3B;
+    font-weight: 600;
+  }
+  .make-inquiries-btn-container{
+    margin:0px 0px 0px 4px;
+  }
+  .make-inquiries-btn{
+    font-size: 1rem;
+ }
+ 
+
+/* Destination - section */
+.destination {
+   min-height: 100vh;
+   position: relative;
+   color: white;
+   text-align: center;
+}
+.destination-title{
+    line-height: 20px;
+    font-size: 55PX;
+    font-weight: bold;
+    margin-bottom: 25px;
+    position: relative;
+}
+.destination-description{
+    font-size: 23px;
+    margin-bottom: 1rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.destination-content {
+    position: inherit;
+    z-index: 2;
+    text-align: center;
+}
+.read-more{
+    font-size: 12px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.read-less{
+    font-size: 12px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.destination-details{
+    height: auto;
+}
+.details-grid {
+    grid-template-columns: minmax(270px, 1fr);
+    max-width: 1500px ;
+    z-index: 2;
+    position: relative;
+}
+.detail-item{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+.detail-item p{
+    text-align: left;
+    font-size: 1.1rem;
+}
+.nav-arrow {
+    position: absolute;
+    top: 69%;
+    transform: translateY(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 900;
+}
+.screen-prev-arrow{
+    z-index: 900;
+}
+.screen-next-arrow{
+    z-index: 900;
+}
+.East-africa-message{
+    margin: 20px 20px;
+}
+.East-africa-message-content p{
+    font-size: 1em;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* about - section with grid styling */
+.about-section {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+} 
+.about-content{
+    margin:  0 10px;
+    padding:  10px;
+}
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 7px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.about-content p {
+    margin: 0 14px;
+    font-size: .8rem;
+    line-height: 1.6;
+    font-weight: 460;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.about-span-txt{
+    font-weight: bold;
+    color: rgb(59, 59, 59);
+    font-size: 12px;
+}
+.about-grid-display {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for small screens */
+    grid-template-columns: minmax(200px, 1fr);
+}
+.about-grid-content h3{
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: navy;
+}
+.about-grid-content h5{
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: rgb(59, 59, 59);;
+}
+.about-grid-content p{
+    font-size: 12px;
+    margin: 0;
+    color: rgb(77, 77, 77);
+    font-weight: 500;
+}
+.about-grid-content ul li{
+    font-size: 12px;
+    color: rgb(143, 93, 0);
+    font-weight: 500;
+}
+.about-grid-content ul{
+    padding: 0px;
+    margin-bottom: 8px;
+}
+.contact-section{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url(images/zebra-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: 60px;
+    padding: 0;
+}
+.contact-content{
+    margin: 0;
+    padding: 20px;
+    width: 350px;
+    background-color:rgba(0,0,128, 0.6);
+}
+footer{
+    padding-bottom: 10px;
+    background-color: grey;
+    margin-top: 30px;
+}
+
+
+@media (max-width: 480px) {
+    .about-grid-display {
+        grid-template-columns: 1fr; /* Single column for small screens */
+    }
+    .about-grid-content {
+        width: 90%;
+        margin: 10px 0;
+    }
+    
+    .about-grid-display {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.social-icons{
+    display: flex;
+    flex-direction: column;
+   
+}
+}
